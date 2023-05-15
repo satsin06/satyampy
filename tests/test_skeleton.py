@@ -1,6 +1,7 @@
 import pytest
 
 from satyampy.skeleton import fib, main
+from satyampy.addition import add_two_numbers
 
 __author__ = "satsin06"
 __copyright__ = "satsin06"
@@ -23,3 +24,7 @@ def test_main(capsys):
     main(["7"])
     captured = capsys.readouterr()
     assert "The 7-th Fibonacci number is 13" in captured.out
+
+
+def test_add():
+    assert add_two_numbers(200, 100) == 300
